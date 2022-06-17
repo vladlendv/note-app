@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .note-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    .note {
+      text-align: center;
+      overflow: auto;
+      font-size: 20px;
+      word-wrap: break-word;
+      padding: 80px 10px 10px 10px;
+      color: #000;
+      position: relative;
+      background-color: #fff0a7;
+      width: 13.6%;
+      height: 100px;
+      margin: 10px;
+      transition: all .3 ease-in-out;
+    }
+    .done-note {
+      display: flex;
+      justify-content: start;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .done {
+      text-align: center;
+      overflow: auto;
+      word-wrap: break-word;
+      padding: 80px 10px 10px 10px;
+      color: #000;
+      background-color: greenyellow;
+      width: 13.6%;
+      height: 100px;
+      margin: 10px;
+    }
+    .note-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    body {
+      overflow-y: scroll;
+      font-size: 19px;
+      font-family: Arial, sans-serif;
+    }
+    .light {
+      color: darkslategrey;
+      background-color: #fff;
+      transition: all .3s ease-in;
+    }
+    .dark {
+      color: #fff;
+      background-color: #2f3034;
+      transition: all .3s ease-in;
+    }
+    .body-hide {
+      opacity: 0;
+      transition: .5 opacity ease-in-out;
+    }
+    .body-visible {
+      opacity: 1;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body class="light body-hide">
+  <h1 style="text-align: center;">My Notes</h1>
+  <input type="checkbox" name="switch-theme" id="switch-theme">
+
+  <div class="header">
+    <textarea style="margin-bottom: 15px; font-size: 20px;" name="" id="note-text" cols="20" rows="5"></textarea>
+    <button id="add-note">Stick the Note</button>
+  </div>
+  <div class="note-container"></div>
+  <h2 style="text-align: center;">Done Today</h2>
+  <div class="done-note"></div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
